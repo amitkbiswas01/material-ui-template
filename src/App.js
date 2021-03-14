@@ -1,6 +1,7 @@
 import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
 
 import Home from "./components/Home/Home";
+
 const theme = createMuiTheme({
   palette: {
     primary: {

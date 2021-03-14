@@ -33,6 +33,10 @@ const useStyles = makeStyles((theme) => ({
   appbar: {
     backgroundColor: "#fff",
   },
+  navlink: {
+    color: "#000",
+    textDecoration: "none",
+  },
 }));
 
 export default function Navigation() {
@@ -64,8 +68,16 @@ export default function Navigation() {
           <MenuIcon />
         </IconButton>
         <Box component="div" className={classes.menuLink}>
-          <Button color="primary">Home</Button>
-          <Button color="primary">Services</Button>
+          <Button color="primary">
+            <NavLink className={classes.navlink} to="/">
+              Home
+            </NavLink>
+          </Button>
+          <Button color="primary">
+            <NavLink className={classes.navlink} to="/services">
+              Services
+            </NavLink>
+          </Button>
           <Button color="primary">About</Button>
           <Button color="primary">Blog</Button>
           <Button color="primary">Contacts</Button>
