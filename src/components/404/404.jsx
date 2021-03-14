@@ -1,10 +1,17 @@
 import React from "react";
-import { Typography } from "@material-ui/core";
+import { Box, Typography } from "@material-ui/core";
+
+const style = {
+  height: "80vh",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+};
 
 export default function NotFound() {
   return (
-    <div>
+    <Box component="div" style={style}>
       <Typography variant="h2">Page Not Found.</Typography>
-    </div>
+    </Box>
   );
 }

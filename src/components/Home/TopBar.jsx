@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
   topBar: {
     height: "3rem",
     paddingLeft: "1rem",
-    backgroundColor: "#0194DF",
+    backgroundColor: "#4dabf5",
     display: "flex",
     justifyContent: "space-between",
   },

@@ -5,21 +5,22 @@ import Home from "./components/Home/Home";
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: "#023C5A",
+      main: "#1769aa",
     },
     secondary: {
-      main: "#F8537D",
+      main: "#2196f3",
     },
+  },
+  typography: {
+    fontFamily: ["Roboto", "sans-serif"].join(","),
   },
 });
 
 function App() {
   return (
-    <div style={{ background: "#EEF9FE" }}>
-      <MuiThemeProvider theme={theme}>
-        <Home />
-      </MuiThemeProvider>
-    </div>
+    <MuiThemeProvider theme={theme}>
+      <Home />
+    </MuiThemeProvider>
   );
 }
 

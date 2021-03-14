@@ -2,7 +2,6 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
@@ -14,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   brandLogo: {
-    padding: "0.25rem",
+    paddingTop: "0.25rem",
     width: "10rem",
     height: "auto",
   },
@@ -30,9 +29,6 @@ const useStyles = makeStyles((theme) => ({
       display: "none",
     },
   },
-  appbar: {
-    backgroundColor: "#fff",
-  },
   navlink: {
     color: "#000",
     textDecoration: "none",
@@ -47,9 +43,9 @@ export default function Navigation() {
   };
 
   return (
-    <AppBar className={classes.appbar} position="sticky" elevation={0}>
+    <AppBar position="sticky" elevation={0} style={{ backgroundColor: "#fff" }}>
       <Toolbar>
-        <Typography className={classes.logo} variant="h4">
+        <Box component="div" style={{ flexGrow: 1 }}>
           <NavLink to="/">
             <img
               className={classes.brandLogo}
@@ -57,7 +53,7 @@ export default function Navigation() {
               alt="brand-logo"
             />
           </NavLink>
-        </Typography>
+        </Box>
         <IconButton
           className={classes.menuIcon}
           edge="end"
@@ -78,9 +74,11 @@ export default function Navigation() {
               Services
             </NavLink>
           </Button>
-          <Button color="primary">About</Button>
-          <Button color="primary">Blog</Button>
-          <Button color="primary">Contacts</Button>
+          <Button color="primary">
+            <NavLink className={classes.navlink} to="/about">
+              About
+            </NavLink>
+          </Button>
         </Box>
       </Toolbar>
     </AppBar>

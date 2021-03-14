@@ -7,7 +7,8 @@ import ItemCard from "./Card";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    height: "75vh",
+    marginBottom: "2rem",
+    background: "#fff",
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
@@ -45,12 +46,14 @@ export default function Services() {
   const classes = useStyles();
   return (
     <Box className={classes.root} component="div">
-      <Typography variant="h2">Our Services</Typography>
+      <Typography variant="h2" style={{ margin: "2rem" }}>
+        Our Services
+      </Typography>
       <Carousel
         interval={5000}
         autoPlay={true}
         animation="fade"
-        indicators={true}
+        indicators={false}
         navButtonsAlwaysVisible={false}
         navButtonsAlwaysInvisible={false}
       >

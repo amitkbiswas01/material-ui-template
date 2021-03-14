@@ -1,43 +1,33 @@
 import React from "react";
 import {
-  Box,
-  Button,
   Typography,
   Card,
   CardActionArea,
   CardMedia,
-  CardActions,
   CardContent,
 } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
-
-const useStyles = makeStyles((theme) => ({
-  card: {
-    maxWidth: "64rem",
-  },
-  cardFlex: {
-    display: "flex",
-  },
-}));
 
 export default function ItemCard({ elem, index }) {
-  const classes = useStyles();
   return (
     <>
-      <Card key={index} className={classes.card}>
-        <CardActionArea className={classes.cardFlex}>
+      <Card key={index} style={{ maxWidth: "68rem" }}>
+        <CardActionArea style={{ display: "flex" }}>
           <CardMedia
             component="img"
             alt={elem.title}
-            height="320"
-            image="https://source.unsplash.com/1600x900/?dog"
+            height="340"
+            image={`${process.env.PUBLIC_URL}/static/slide-dog.jpg`}
             title={elem.title}
           />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
+            <Typography gutterBottom variant="h3" align="center">
               {elem.title}
             </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
+            <Typography
+              variant="body1"
+              align="center"
+              style={{ marginLeft: "2rem", marginRight: "2rem" }}
+            >
               {elem.desc}
             </Typography>
           </CardContent>
